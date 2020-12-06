@@ -267,6 +267,7 @@
             name="email"
             type="email"
             placeholder="Email"
+            required
           />
         </div>
         <div class="form-group">
@@ -280,6 +281,7 @@
             name="password"
             placeholder="Password"
             title="Please do not use one of your real passwords!"
+            required
           />
         </div>
         <div class="form-group">
@@ -295,7 +297,7 @@
       </form>
     </div>
     <div id="pwned" class="article-clean" style="display: none">
-      <div class="container" style="height: 2220px">
+      <div class="container" style="height: 100%">
         <div class="row">
           <div class="col-lg-10 col-xl-8 offset-lg-1 offset-xl-2">
             <div class="intro">
@@ -329,18 +331,20 @@
                   height: 18px;
                 "
               >
-                Try following the instructions above to see how the hackers
+                Try following the instructions below to see how the hackers
                 stole your login
               </p>
-              <img
-                class="img-fluid"
-                src="assets/img/chaozzy-lin-SlHFrXTlCc8-unsplash.jpg"
-              />
+              <video controls width="800" loop="true" muted="true">  <source src="assets/img/Instructions.mp4" type="video/mp4"></video>
             </div>
             <div class="text">
               <p style="font-family: Lato, sans-serif">
+                First, inspect your browser. Then go to the "Network" tab. 
+                Login with your credentials and then look at the request called "posts" with a status of 201. 
+                If you look at the request payload at the bottom, you can see that the server leaked your credentials.
+              </p>
+              <p style="font-family: Lato, sans-serif">
                 The website sent an HTTP request to a server over an insecure
-                connection. Your information was revealed in clear text and is
+                connection and the server returned the response in plain text. Your information was revealed in clear text and is
                 vulnerable to snooping.&nbsp;&nbsp;
               </p>
               <p style="font-family: Lato, sans-serif">
@@ -426,11 +430,9 @@
         });
         return response.json();
       }
-      function testResults(e) {
-          console.log(e)
-        hack(username.value, password.value)
+      function testResults() {
+       hack(username.value, password.value)
       .then(data => {
-          console.log(data)
           document.getElementById("pwned").style.display = "block";
       });
       }
