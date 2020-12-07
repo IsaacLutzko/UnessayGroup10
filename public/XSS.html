@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Home - Brand</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Bebas+Neue">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Code+Pro">
+    <link rel="stylesheet" href="assets/fonts/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/fonts/ionicons.min.css">
+    <link rel="stylesheet" href="assets/fonts/simple-line-icons.min.css">
+    <link rel="stylesheet" href="assets/css/Article-Clean.css">
+    <link rel="stylesheet" href="assets/css/Login-Form-Dark.css">
+    <link rel="stylesheet" href="assets/css/Navigation-Clean.css">
+    <link rel="stylesheet" href="assets/css/xss.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/js-cookie@rc/dist/js.cookie.min.js"></script>
+    <script src="assets/js/xss.js"></script>
+</head>
+
+<body>
+    <nav class="navbar navbar-light navbar-expand-md bg-light navigation-clean" style="text-shadow: 0px 0px;">
+        <div class="container-fluid"><a class="navbar-brand" href="index.html" style="font-family: 'Bebas Neue', cursive;font-size: 50px;text-align: center;margin: 5px;height: 82px;width: 416px;font-weight: bold;">Security Vulnerabilties</a><a class="btn btn-primary" role="button"
+            style="font-family: 'Bebas Neue', cursive;font-size: 25px;text-align: center;color: rgb(0,0,0);background: rgba(255,255,255,0.58);border: 4px solid rgb(0,0,0);" href="XSS.html">XSS</a><a class="btn btn-primary" role="button" style="font-family: 'Bebas Neue', cursive;font-size: 25px;text-align: center;color: rgb(0,0,0);background: rgba(255,255,255,0.58);border: 4px solid rgb(0,0,0);"
+            href="BrokenAuth.html">broken auth</a><a class="btn btn-primary" role="button" style="font-family: 'Bebas Neue', cursive;font-size: 25px;text-align: center;color: rgb(0,0,0);background: rgba(255,255,255,0.58);border: 4px solid rgb(0,0,0);" href="SensDataXP.html">Data Exposure</a>
+            <a class="btn btn-primary" role="button" style="font-family: 'Bebas Neue', cursive;font-size: 25px;text-align: center;color: rgb(0,0,0);background: rgba(255,255,255,0.58);border: 4px solid rgb(0,0,0);" href="about.html">About</a><button class="navbar-toggler" data-toggle="collapse"></button>
+        </div>
+    </nav>
+    <section style="height: 50%;color: rgb(0,0,0);">
+        <div class="card" style="height: 100%;background: rgb(248,249,250);filter: blur(0px);opacity: 1;">
+            <div class="card-body" style="height: 100%;margin-top: -1px;margin-right: auto;margin-left: auto;width: 75%;">
+                <h1 class="card-title" style="text-align: center;margin-bottom: 10px;height: auto;font-size: 38px;">Cross-Site Scripting (XSS)</h1>
+                <h6 class="text-muted card-subtitle mb-2" data-toggle="tooltip" data-bs-tooltip="" data-placement="right" style="text-align: center;width: 35%;margin: 0 auto 0 auto;height: auto;margin-bottom: 0px;" title="According to OWASP">7th MOST CRITICAL SECURITY RISK*</h6>
+                <p class="card-text" style="text-align: center;margin-bottom: 40px;margin-top: 40px;height: auto;width: 852px;margin-right: auto;margin-left: auto;">Cross-site scripting, or as it's most commonly known, XSS, is a form of injection attack.&nbsp;XSS typically exposes vulnerabilities through user input interaction, such as a comment section or a sign-up form!&nbsp;
+                    The attacker will inject malicious code into a web page and that page will then be the delivery system for that malicious code.&nbsp; Depending on the script, attackers have the ability to then mislead users into providing personal data, reveal cookies so the attacker could act as an imposter, &nbsp; 
+                    or they could activate a trojan horse program hidden within the script. The possibilities are really endless when it comes to XSS, so it is important to know how to prevent it!</p>
+                <p style="text-align: center;font-size: 18px;">Lets look at how XSS works!<br></p>
+                <ol style="text-align: center; list-style-position: inside;">
+                    <li>Start with entering your name in the textbox below!</li>
+                    <br>
+                    <li>Now enter this into the textbox instead! <code>&lt;img src='notAnImage' onerror='alert("Imagine if I was malicious")'&gt;</code></li>
+                    <br>
+                    <li>Now take it one step further: <code>&lt;img src='notAnImage' onerror='document.body.className = "flip"; setTimeout(function(){ document.body.className = ""; },3000);'&gt;</code></li>
+                    <br>
+                    <li>And finally: <code>&lt;img src='notAnImage' onerror='const oldContent=document.getElementsByTagName("html")[0].innerHTML;var img=document.createElement("img");img.src="https://i1.lensdump.com/i/0pToR5.png";img.style.width="100%";img.style.height="100%";document.getElementsByTagName("html")[0].innerHTML="";document.getElementsByTagName("html")[0].appendChild(img);setTimeout(function(){document.getElementsByTagName("html")[0].innerHTML=oldContent;document.getElementById("replaceThis").innerHTML="Hi there!";},4000);'&gt;</code></li>
+                </ol>
+            </div>
+        </div>
+    </section>
+    <div
+      class="login-dark"
+      style="background: url('assets/img/markus-spiske-68ZlATaVYIo-unsplash.jpg')right / cover,rgb(248, 249, 250);
+        height: 300px;
+        font-size: 17px;
+        opacity: 1;
+        filter: blur(0px);">
+      <form style="
+          color: #ffffff;
+          height: 220px;
+          margin-top: 20px;
+          margin-bottom: auto;">
+        <h1 id='replaceThis'
+          style="
+            text-align: center;
+            font-size: 24px;
+            font-family: 'Source Code Pro', monospace;
+            margin-bottom: 20px;">
+            Hi there!
+        </h1>
+        <div class="form-group">
+          <input
+            id="name"
+            class="form-control"
+            name="name"
+            type="text"
+            placeholder="Type your name here..."
+          />
+        </div>
+        <div class="form-group">
+          <button
+            type='button'
+            id="nameButton"
+            onclick="xssExample()"
+            class="btn btn-primary btn-block">
+            Click me and I say hi back!
+          </button>
+        </div>
+      </form>
+    </div>
+    <div class="container" style="height: 100%; margin-top: 35px;">
+      <div class="row">
+        <div class="col-lg-10 col-xl-8 offset-lg-1 offset-xl-2">
+          <div class="text">
+            <p style="font-family: Lato, sans-serif">
+              As you can see in this simple demonstration, if you do not sanitize your inputs, scripts can be injected.
+            </p>
+            <p style="font-family: Lato, sans-serif">
+              Thank about this, imagine if any of those above examples, instead of staying on the client side, they got pushed to a database?
+              If this was the case, and those inputs were rendered on an unsuspecting victim, you can see how this is a powerful vulnerability.
+              In the last example what if in the background, your cookies were being scraped for personal data, or their browser was hijacked, or
+              a key logger was silently being embedded in the background. These are all very real possibilities which should make you take XSS seriously.
+            </p>
+            <figure></figure>
+          </div>
+          <p style="font-family: Lato, sans-serif"></p>
+          <h4>Ways to prevent this attack:<br /></h4>
+          <ul>
+            <li style="font-family: Lato, sans-serif; font-size: 16px">
+              Use modern front end frameworks such as Angular. These frameworks almost always have 
+              built in and detailed functionality that handle the escaping of MOST XSS attacks (but definitely not all)
+            </li>
+            <li style="font-family: Lato, sans-serif; font-size: 16px">
+              When sending HTTP requests that contain user input, ensure to set your Content-Type and X-Content-Type-Options
+              headers to ensure that the data you are sending or receiving is the type you expect it to be
+            </li>
+            <li style="font-family: Lato, sans-serif; font-size: 16px">
+              Implement a content security policy (CSP). By including a Content-Security-Policy header
+              in your HTTP requests, you can specify limitations on scripts and images being rendered on the page
+            </li>
+            <li style="font-family: Lato, sans-serif; font-size: 16px">
+              Always implement your own form of escaping and sanitizing user input because you cannot solely rely on
+              whichever framework you are using to catch any XSS attempts
+            </li>
+          </ul>
+        </div>  
+      </div>
+    </div>
+    <div style="width:100%; text-align: center">
+      <iframe id="interactApp5fcd70fc55282b0016160591" width="800" height="600" style="border:none;max-width:100%;margin:0;" allowTransparency="true" frameborder="0" src="https://quiz.tryinteract.com/#/5fcd70fc55282b0016160591?method=iframe"></iframe>
+    </div>
+      <footer class="footer bg-light" style="background: url(&quot;https://cdn.bootstrapstudio.io/placeholders/1400x800.png&quot;);height: 180px;margin: 0px;">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 my-auto h-100 text-center text-lg-left">
+                    <p class="text-muted small mb-4 mb-lg-0">Fall 2020 CPSC329 Unessay Project Group 10<br></p>
+                </div>
+                <div class="col-lg-6 my-auto h-100 text-center text-lg-right">
+                    <ul class="list-inline mb-0">
+                        <li class="list-inline-item"></li>
+                        <li class="list-inline-item"><a href="#"></a></li>
+                        <li class="list-inline-item"><a href="https://github.com/IsaacLutzko/UnessayGroup10" style="color: rgb(0,0,0);font-size: 30px;"><i class="fa fa-github-square fa-2x fa-fw"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/js/bs-init.js"></script>
+</body>
+
+</html>
