@@ -319,7 +319,7 @@
                   font-family: Lato, sans-serif;
                 "
               >
-                So what just happened?
+                (Almost)
               </h5>
               <p
                 style="
@@ -331,8 +331,7 @@
                   height: 18px;
                 "
               >
-                Try following the instructions below to see how the hackers
-                stole your login
+                Try following the instructions below to see how your data could have been exposed
               </p>
               <video controls width="800" loop="true" muted="true">  <source src="assets/img/Instructions.mp4" type="video/mp4"></video>
             </div>
@@ -343,9 +342,11 @@
                 If you look at the request payload at the bottom, you can see that the server leaked your credentials.
               </p>
               <p style="font-family: Lato, sans-serif">
-                The website sent an HTTP request to a server over an insecure
-                connection and the server returned the response in plain text. Your information was revealed in clear text and is
-                vulnerable to snooping.&nbsp;&nbsp;
+                The website sent an HTTP request to a server to create a new user and the server returned the response in plain text, including the new user's email and password. 
+                If this site didn't use HTTPS, your information would have been revealed in plain text and would be vulnerable to a man-in-the-middle attack. 
+                A man-in-the-middle attack is where an attacker sits between you and the server and listens to network traffic coming from your machine. 
+                If that traffic is unencrypted (which is the case with HTTP), then it is possible for the attacker to view your network traffic and could have discovered your password.
+                Good thing we don't actually want to hack you so our site uses HTTPS (phew!).&nbsp;&nbsp;
               </p>
               <p style="font-family: Lato, sans-serif">
                 Make sure that you always check your network traffic when using
