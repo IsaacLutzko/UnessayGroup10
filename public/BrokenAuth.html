@@ -8,35 +8,96 @@
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Bebas+Neue">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Code+Pro">
     <link rel="stylesheet" href="assets/fonts/font-awesome.min.css">
     <link rel="stylesheet" href="assets/fonts/ionicons.min.css">
     <link rel="stylesheet" href="assets/fonts/simple-line-icons.min.css">
-    <link rel="stylesheet" href="assets/css/Article-Clean.css">
+    <link rel="stylesheet" href="assets/css/Login-Form-Dark-1.css">
     <link rel="stylesheet" href="assets/css/Login-Form-Dark.css">
-    <link rel="stylesheet" href="assets/css/Navigation-Clean.css">
+    <link rel="stylesheet" href="assets/css/untitled.css">
 </head>
 
-<body>
-    <nav class="navbar navbar-light navbar-expand-md bg-light navigation-clean" style="text-shadow: 0px 0px;">
-        <div class="container-fluid"><a class="navbar-brand" href="index.html" style="font-family: 'Bebas Neue', cursive;font-size: 50px;text-align: center;margin: 5px;height: 82px;width: 416px;font-weight: bold;">Security Vulnerabilties</a><a class="btn btn-primary" role="button"
-            style="font-family: 'Bebas Neue', cursive;font-size: 25px;text-align: center;color: rgb(0,0,0);background: rgba(255,255,255,0.58);border: 4px solid rgb(0,0,0);" href="XSS.html">XSS</a><a class="btn btn-primary" role="button" style="font-family: 'Bebas Neue', cursive;font-size: 25px;text-align: center;color: rgb(0,0,0);background: rgba(255,255,255,0.58);border: 4px solid rgb(0,0,0);"
-            href="BrokenAuth.html">broken auth</a><a class="btn btn-primary" role="button" style="font-family: 'Bebas Neue', cursive;font-size: 25px;text-align: center;color: rgb(0,0,0);background: rgba(255,255,255,0.58);border: 4px solid rgb(0,0,0);" href="SensDataXP.html">Data Exposure</a>
-            <a class="btn btn-primary" role="button" style="font-family: 'Bebas Neue', cursive;font-size: 25px;text-align: center;color: rgb(0,0,0);background: rgba(255,255,255,0.58);border: 4px solid rgb(0,0,0);" href="about.html">About</a><button class="navbar-toggler" data-toggle="collapse"></button>
-        </div>
+<body style="width: 100%;">
+    <nav class="navbar navbar-light navbar-expand-md bg-light navigation-clean" style="text-shadow: 0px 0px;width: 100%;">
+        <div class="container-fluid"><a class="navbar-brand" href="index.html" style="font-family: 'Bebas Neue', cursive;font-size: 50px;text-align: center;margin: 5px;height: 82px;width: 416px;font-weight: bold;">Security Vulnerabilties</a><a class="btn btn-primary" role="button" style="font-family: 'Bebas Neue', cursive;font-size: 25px;text-align: center;color: rgb(0,0,0);background: rgba(255,255,255,0.58);border: 4px solid rgb(0,0,0);" href="XSS.html">XSS</a><a class="btn btn-primary" role="button" style="font-family: 'Bebas Neue', cursive;font-size: 25px;text-align: center;color: rgb(0,0,0);background: rgba(255,255,255,0.58);border: 4px solid rgb(0,0,0);" href="BrokenAuth.html">broken auth</a><a class="btn btn-primary" role="button" style="font-family: 'Bebas Neue', cursive;font-size: 25px;text-align: center;color: rgb(0,0,0);background: rgba(255,255,255,0.58);border: 4px solid rgb(0,0,0);" href="SensDataXP.html">Data Exposure</a><a class="btn btn-primary" role="button" style="font-family: 'Bebas Neue', cursive;font-size: 25px;text-align: center;color: rgb(0,0,0);background: rgba(255,255,255,0.58);border: 4px solid rgb(0,0,0);" href="about.html">About</a><button class="navbar-toggler" data-toggle="collapse"></button></div>
     </nav>
-    <section style="height: 235px;">
-        <div class="card" style="height: 100%;background: rgb(248,249,250);filter: blur(0px);opacity: 1;">
-            <div class="card-body" style="height: 100%;margin-top: -1px;margin-right: auto;margin-left: auto;width: 75%;">
-                <h4 class="card-title" style="text-align: center;">Title</h4>
-                <h6 class="text-muted card-subtitle mb-2" style="text-align: center;">Subtitle</h6>
-                <p class="card-text" style="text-align: center;">Nullam id dolor id nibh ultricies vehicula ut id elit. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus.</p>
-                <div style="text-align: center;"><label style="margin-right: 20px;">Label</label><input type="text" style="text-align: left;margin-right: 24px;padding: 0px;margin-top: 0px;height: 30px;"><button class="btn btn-primary" type="button" style="height: 30px;padding: 0px;padding-left: 10px;padding-right: 10px;">Button</button></div>
+    <section style="height: 100%;width: auto;">
+        <div class="card" style="height: 100%;background: rgb(248,249,250);filter: blur(0px);opacity: 1;text-align: left;">
+            <div class="card-body" style="height: 100%;margin-top: 0px;margin-right: auto;margin-left: auto;width: 50%;">
+                <h4 class="card-title" style="text-align: center;">Broken Authentication</h4>
+                <h6 class="text-muted card-subtitle mb-2" style="text-align: center;">2nd MOST CRITICAL SECURITY RISK*</h6>
+                <p class="card-text" style="text-align: center;"><br>Broken authentication is, according to its OWASP rating, one of the most severe security vulnerabilities for developers and is typically caused by improperly implemented authentication and session management functions. Broken authentication attacks aim to take control over different user accounts, granting the attacker the same privileges as the user. Authentication is essentially “broken” when attackers are able to compromise passwords, keys or session tokens, account information, and any other details to assume the user’s identity.&nbsp;<br><br>&nbsp;<br><br></p>
             </div>
         </div>
     </section>
-    <footer class="footer bg-light" style="background: url(&quot;https://cdn.bootstrapstudio.io/placeholders/1400x800.png&quot;);height: 180px;margin: 0px;">
+    <div class="login-dark" style="height: auto;margin-top: auto;width: auto;">
+        <form method="post" style="height: 364px;margin-top: 80px;">
+            <h2 class="sr-only">Login Form</h2>
+            <div class="illustration"><i class="icon ion-lock-combination"></i></div>
+            <div class="form-group"><input class="form-control" type="password" id="password" name="password" placeholder="Enter your password here:"></div>
+            <div class="form-group"><button class="btn btn-primary btn-block" id="button" type="button" onclick="brokenAuth()">&nbsp;Get Password Stats</button></div>
+        </form>
+        <div style="height: 628px;background: url(&quot;assets/img/markus-spiske-iar-afB0QQw-unsplash.jpg&quot;) no-repeat;background-size: cover;"></div>
+    </div>
+    <section id="pStats" style="height: 100%;margin-bottom: -8px;">
+        <div class="container" id="pass_stats" style="width: 100%;height: 100%;margin-left: auto;text-align: center;display: none;">
+            <h1 style="text-align: center;margin-bottom: 16px;margin-left: 0px;">Stats about your password:</h1>
+            <div style="margin: 0 auto;text-align: center;width: 50%;">
+                <p id="passGuess" style="text-align: center;"></p>
+                <p id="passTime1" style="text-align: center;"></p>
+                <p id="passTime2" style="text-align: center;"></p>
+                <p id="passTime3" style="text-align: center;"></p>
+                <p id="passTime4" style="text-align: center;"></p>
+                <p id="passFeedback" style="text-align: center;"></p>
+                <p id="passFeedback2" style="text-align: center;"></p>
+                <p id="passScore" style="text-align: center;"></p>
+            </div>
+        </div>
+        <div class="card" style="height: 100%;background: rgb(255,255,255);filter: blur(0px);opacity: 1;margin-top: 0;padding-top: -2px;width: auto;">
+            <div class="card-body" id="scores" style="height: 100%;margin-top: 0px ;margin-right: auto;margin-left: auto;width: 100%;margin-bottom: 15px;display: none;">
+                <h1 style="text-align: center;">What does all of this mean?</h1>
+                <h3 style="text-align: center;margin-left: 0%;">The Different Scenarios</h3>
+                <ul style="margin: 0px auto;margin-left: auto;margin-right: auto;width: 50%;padding: 0;margin-bottom: 0px;">
+                    <li>Scenario A:&nbsp; Online brute-force attack with 100 attempts per hour limit: This cracking method assumes that the brute force attack is being done in the actual authentication page for some service, with a maximum attempt limit of 100 passwords per hour.<br><br></li>
+                    <li>Scenario B:&nbsp; Online brute-force attack with no rate limit: This cracking method assumes that the brute-force attack is being done in the actual authentication page for some service, with no attempt limits. <br><br></li>
+                    <li>Scenario C:&nbsp; Offline slow hashing method: This scenario assumes that the attackers have gotten a hold of a database or table of hashed passwords with user-unique salting. It is assumed that a very slow hash function is used, allowing only 10000 attempts per second.<br><br></li>
+                    <li>Scenario D:&nbsp;&nbsp;Offline fast hashing method: This scenario assumes that the attackers have gotten a hold of a database or table of hashed passwords with user-unique salting. It is assumed that a fast hash function is used, allowing about 10 Billion attempts per second.<br><br></li>
+                </ul>
+                <h3 style="text-align: center;margin: 0%;margin-left: 0%;">Scores Explanation:</h3>
+                <ul style="margin: 0px;margin-left: auto;width: 50%;padding: 0;margin-right: auto;">
+                    <li>0 Score: Too guessable, highly risky password. Can be cracked in less than 1000 guesses.</li>
+                    <li>1 Score: Very guessable, but protected against online brute force attacks with rate limits (Scenario A) Can be cracked in less than 1 Million guesses</li>
+                    <li>2 Score: Somewhat guessable, but protected against attacks without rate limits (Scenario B). Can be cracked in less than 100 Million guesses</li>
+                    <li>3 Score: Safely unguessable, moderate protection from offline slow-hash attacks (Scenario C). Can be cracked in less than 10 Billion guesses.<br></li>
+                    <li>4 Score: Very unguessable strong protection from offline slow hash attacks (Scenario C). Would take over 10 Billion guesses to crack.&nbsp;<br></li>
+                </ul>
+            </div>
+        </div>
+        <div class="card" style="height: 100%;background: rgb(255,255,255);filter: blur(0px);opacity: 1;padding-bottom: -46px;border-style: none;">
+            <div class="card-body" style="height: 100%;margin-top: 0;margin-right: auto;margin-left: auto;width: 50%;margin-bottom: 0;">
+                <p class="card-text" style="text-align: left;"><br><br>It is evident that weak passwords may be guessed relatively quickly. Systems that do not implement password spraying protections or that do not inform system admins of repeated unsuccessful authentication attempts are at serious risk of becoming password “oracles”&nbsp; to determine if credentials are valid. Password spraying is the practice by attackers of using a database of common passwords to break into an account.&nbsp; Now, imagine if a lack of password spraying protections was coupled with vulnerabilities that allow users to set very weak passwords. A similar practice, credential stuffing, happens when attackers get access to databases of unencrypted or poorly hashed emails and passwords.&nbsp;<br><br>Another broad aspect of Authentication is Session management. A web session is a sequence of network transactions associated to the same user within a period of time. Web applications issue every user a unique session ID with every site visit, which allows the application to communicate with the user.<br><br><br><br></p>
+                <h1 style="text-align: center;margin-left: 0;">Attacks related to Session Management</h1>
+                <p>Session Hijacking:&nbsp;Attackers use stolen session IDs to impersonate user’s identities. Session hijacking may occur when session timeouts do not happen promptly after a period of inactivity, even after the browser has been closed on the web application. If the session ID has not been revoked, this gives hackers a window of opportunity to access an account.&nbsp;<br><br></p>
+                <p>Session Fixation:&nbsp;A very commonly overlooked best practice is to rotate session IDs after a user logs in, instead of giving a user the same ID before and after authentication. Web applications that do not rotate IDs are vulnerable to session fixation attacks, a variation of session hijacking. According to information security blogger Troy Hunt, the idea behind a session fixation attack is that the attacker predetermines the session ID that the victim will use. The attacker then sends the victim a link that contains the predetermined session ID, and the link will point to a resource that requires the victim to log in. After this authentication, whether the attacker or the victim presents that session ID to the server, the server will establish that the session ID corresponds to an authenticated session and grant access.&nbsp;<br><br></p>
+                <p>Session ID URL Exposure and Rewriting: Another common example of session hijacking is URL Rewriting. This may happen when an individual's session ID appears in the URL of a website. Anyone who has access to this (physically, or via an unsecured Wi-Fi connection) can get into the session.&nbsp;<br><br></p>
+                <div style="text-align: center;"></div>
+                <h1 style="text-align: left;font-size: 25px;">How to Prevent Attacks Regarding Compromised or Weak Credential Exploitation</h1>
+                <ul>
+                    <li>Not allowing Weak passwords. As we saw in our demonstration, weak passwords can be cracked quickly in a brute force attack by password spraying. Automatically rejecting any of the most common passwords on the web is advisable.<br></li>
+                    <li>Aligning password length, complexity, and rotation policies with NIST Password standards. These include: 1) An eight-character minimum when password is set by a human of six-character minimum by a password manager. 2) Applications should permit any printable characters listed in ASCII, including spaces, and should even accept UNICODE characters. 3) Removing reset policies, as users just create predictable variations of the same password that end up being less safe than if they had the same, strong password. 4) Dropping complexity requirements, as this makes passwords harder to remember, and makes users prompt to use more predictable base passwords. 5) Not implementing clue-based password recovery, as personal information is abundant online these days. 6) Limiting password entry attempts before notifying admins of suspicious activity. This would disallow brute-force attacks, and lower chances of password cracking and intrusion significantly.&nbsp;<br></li>
+                    <li>Implementing Multi-Factor Authentication.<br></li>
+                    <li>Not storing passwords in clear text. All credentials should be hashed, and potentially salted instead of being compared in clear text. This still allows for password guessing, as the same input would yield the same hash, but would slow attackers.<br></li>
+                </ul>
+                <h1 style="text-align: left;font-size: 25px;height: auto;">How to Prevent Attacks Regarding Session Management Vulnerabilities</h1>
+                <ul>
+                    <li>Control Session Length. Developers can tailor session length to the type of user and application they are using. A streaming video application may want to have very long sessions, but an insurance application may require short session timeouts after short periods of inactivity.<br></li>
+                    <li>Rotate and Invalidate Session IDs: The best way to prevent session fixation is to issue the user with a new session ID after login. Session IDs should also be invalidated immediately after a session ends so they cannot be exploited by attackers.<br></li>
+                    <li>Not including session IDs in URLs to avoid URL rewriting<br></li>
+                </ul>
+                <iframe class="embed-responsive-item" id="interactApp5fd031d7fc4760001688f2dc" width="800" height="600" style="border:none;max-width:100%;margin:0;" allowtransparency="true" frameborder="0" src="https://quiz.tryinteract.com/#/5fd031d7fc4760001688f2dc?method=iframe"></iframe>
+            </div>
+        </div>
+    </section>
+    <footer class="footer bg-light" style="background: url(&quot;https://cdn.bootstrapstudio.io/placeholders/1400x800.png&quot;);height: 180px;margin: 0px;margin-top: auto;">
         <div class="container">
             <div class="row">
                 <div class="col-lg-6 my-auto h-100 text-center text-lg-left">
@@ -54,7 +115,8 @@
     </footer>
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
-    <script src="assets/js/bs-init.js"></script>
+    <script src="assets/js/Script.js"></script>
+    <script src="assets/js/zxcvbn.js"></script>
 </body>
 
 </html>
