@@ -6,7 +6,7 @@
       name="viewport"
       content="width=device-width, initial-scale=1.0, shrink-to-fit=no"
     />
-    <title>Home - Brand</title>
+    <title>Sensitive Data Exposure</title>
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css" />
     <link
       rel="stylesheet"
@@ -30,6 +30,8 @@
     <link rel="stylesheet" href="assets/css/Article-Clean.css" />
     <link rel="stylesheet" href="assets/css/Login-Form-Dark.css" />
     <link rel="stylesheet" href="assets/css/Navigation-Clean.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="assets/js/sensData.js"></script>
   </head>
 
   <body style="opacity: 1">
@@ -91,20 +93,6 @@
           href="SensDataXP.html"
           >Data Exposure</a
         >
-        <a
-          class="btn btn-primary"
-          role="button"
-          style="
-            font-family: 'Bebas Neue', cursive;
-            font-size: 25px;
-            text-align: center;
-            color: rgb(0, 0, 0);
-            background: rgba(255, 255, 255, 0.58);
-            border: 4px solid rgb(0, 0, 0);
-          "
-          href="about.html"
-          >About</a
-        ><button class="navbar-toggler" data-toggle="collapse"></button>
       </div>
     </nav>
     <section style="height: 50%; color: rgb(0, 0, 0)">
@@ -173,7 +161,7 @@
             encrypt sensitive data, and by acquiring these kinds of
             information,&nbsp; attackers have the ability to commit crimes such
             as credit card fraud, identity theft, and other related
-            crimes.&nbsp; It is also important to note that recently attacks due
+            crimes.&nbsp; It is also important to note that recently, attacks due
             to Sensitive Data Exposure have been very prevalent, so it is an
             important web security risk to be aware of.
           </p>
@@ -345,7 +333,7 @@
                 The website sent an HTTP request to a server to create a new user and the server returned the response in plain text, including the new user's email and password. 
                 If this site didn't use HTTPS, your information would have been revealed in plain text and would be vulnerable to a man-in-the-middle attack. 
                 A man-in-the-middle attack is where an attacker sits between you and the server and listens to network traffic coming from your machine. 
-                If that traffic is unencrypted (which is the case with HTTP), then it is possible for the attacker to view your network traffic and could have discovered your password.
+                If that traffic is unencrypted (which is the case with HTTP), then it is possible for the attacker to view your network traffic and discover your password.
                 Good thing we don't actually want to hack you so our site uses HTTPS (phew!).&nbsp;&nbsp;
               </p>
               <p style="font-family: Lato, sans-serif">
@@ -364,7 +352,7 @@
                 First and foremost, encrypt all sensitive data that is at rest!
               </li>
               <li style="font-family: Lato, sans-serif; font-size: 16px">
-                Do not store sensitive data unless that is necessary, so get rid
+                Do not store sensitive data unless it is necessary, so get rid
                 of sensitive data&nbsp;once it is no longer being used
               </li>
               <li style="font-family: Lato, sans-serif; font-size: 16px">
@@ -372,7 +360,7 @@
                 appropriate key management
               </li>
               <li style="font-family: Lato, sans-serif; font-size: 16px">
-                Do not allow caching for response that contains sensitive data
+                Do not allow caching for any response that contains sensitive data
                 because caching is another way that attackers&nbsp;can get
                 access to sensitive data
               </li>
@@ -433,6 +421,7 @@
         });
         return response.json();
       }
+
       function testResults() {
        hack(username.value, password.value)
       .then(data => {

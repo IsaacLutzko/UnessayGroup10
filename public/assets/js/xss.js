@@ -1,3 +1,23 @@
+$(document).ready(function() {
+  $(window).keydown((enter) => {
+    if(enter.keyCode == 13) {
+      enter.preventDefault();
+      return false;
+      }
+    });
+
+    $('#nameButton').attr('disabled', true);
+    $('#name').keyup(function() {
+        if ($(this).val().length !=0) {
+          $('#nameButton').attr('disabled', false);  
+        }          
+        else {
+          $('#nameButton').attr('disabled', true);
+        }
+    });
+
+});
+
 function xssExample() {
   const input = $("#name").val();
   document.getElementById('replaceThis').innerHTML = `Hi there ${input}!`;
